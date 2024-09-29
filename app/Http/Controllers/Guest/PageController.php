@@ -9,8 +9,9 @@ use App\Models\Movie;
 
 class PageController extends Controller
 {
-    public function index() {
+    public function index(){
         $movies = Movie::all();
-        dd($comics);
+        
+        return view('home', compact('movies'));
     }
 }
